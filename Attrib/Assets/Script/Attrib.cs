@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Attrib : MonoBehaviour
 {
-
+    [Tooltip("Testing out attributes")]
     [Range(0,500)][SerializeField] private int number;
 
     // Start is called before the first frame update
