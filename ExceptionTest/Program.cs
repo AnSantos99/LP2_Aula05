@@ -12,9 +12,7 @@ namespace ExceptionTest
             Console.WriteLine("Insere um numero inteiro:");
             try
             {
-                i = int.Parse(Console.ReadLine());
-                
-                
+                i = int.Parse(Console.ReadLine());  
             }
             catch(FormatException e)
             {
@@ -22,13 +20,16 @@ namespace ExceptionTest
             }
             catch(OverflowException e)
             {
-                Console.WriteLine("Number is greater or less than max and min value: " + e.Message);
+                Console.WriteLine(
+                    "Number is greater or less than max and min value: " +
+                     e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Obrigada por ter utilizado este programa!");
             }
 
-            Console.WriteLine($"Numero inserido: {i}");
-            
-            
-            
+            Console.WriteLine($"Numero inserido: {i}"); 
         }
     }
 }
